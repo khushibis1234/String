@@ -1,0 +1,93 @@
+toString() :
+class A{
+    int a;
+    A(int a){
+        this.a=a;
+    }
+    public String toString(){
+        return a+" ";
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        A p=new A(78);
+        System.out.println(p.toString());
+    }
+}
+
+
+hashCode() :
+class A{
+    int a;
+    A(int a){
+        this.a=a;
+    }
+
+public int hashCode() {
+    return a;
+
+}
+}
+public class Main{
+    public static void main(String[] args){
+        A p=new A(34);
+        System.out.println(p.hashCode());
+    }
+}
+
+
+getClass() : 
+class A{
+    void show(){
+        System.out.println("hello world");
+    }
+
+}
+public class Main{
+    public static void main(String[] args){
+        A p=new A();
+        System.out.println(p.getClass().getName());
+    }
+}
+
+
+finalize() :
+class A{
+    public void finalize(){
+        System.out.println("call");
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        A s1=new A();
+        A s2=new A();
+        s1=null;
+        s2=null;
+        System.gc();
+    }
+}
+
+
+String --->wc ---->pd 
+public class Main{
+    public static void main(String[] args){
+        String s="1234";
+        Integer i=Integer.parseInt(s);
+        int d=i;
+        System.out.println(d);
+
+        String s1="64.57";
+        float f=Float.parseFloat(s1);
+        float f1=f;
+        System.out.println(f1);
+    }
+}
+
+
+wc convert pd :
+public class Main{
+    public static void main(String[] args){
+        Integer i=89;
+        System.out.println(i.toString());
+    }
+} 
